@@ -1,38 +1,25 @@
-.App {
-  text-align: center;
+ .div-div{
+    background-image:  url("/images/bgnav.jpg");
+    background-position: center;
+    
+}  
+.divlogin{
+background-image: url("/images/bg-login.png");
+padding-left: 5rem;
+padding-top: 5rem;
+padding-bottom: 25rem;
+background-position: center;
+ 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.divregister{
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+background-image: url("/images/bg-register.png");
+    padding-top: 5rem;
+    padding-bottom: 20rem;
+    background-position: left;
+padding-left: 5rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.imgadd{
+    
 }
