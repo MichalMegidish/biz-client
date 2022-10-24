@@ -6,4 +6,5 @@ export interface Card {
   address: string;
   description: string;
   phone: string;
+  cardNumber?: number;
 }

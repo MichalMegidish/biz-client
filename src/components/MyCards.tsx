@@ -40,9 +40,13 @@ const MyCards: FunctionComponent<MyCardsProps> = () => {
         <div className="row">
           {cards.length ? (
             cards.map((card: Card) => (
-              <div key={card._id} className="card col-md-3 m-2 text-center">
-                <div>
-                  <img src={card.image} alt="Basa" style={{ width: "10rem" }} />
+              <div
+                key={card._id}
+                className="card col-md-3 m-2 text-center"
+                style={{ height: "30rem" }}
+              >
+                <div className="" style={{ maxHeight: "11rem" }}>
+                  <img src={card.image} alt="" style={{ maxHeight: "11rem" }} />
                 </div>
                 <div className="card-body text-center"></div>
                 <div className="card-footer text-center">
@@ -50,6 +54,7 @@ const MyCards: FunctionComponent<MyCardsProps> = () => {
                   <h5 className="card-title">{card.address}</h5>
                   <p className="card-text">{card.description}</p>
                   <p className="card-text"> {card.phone}</p>
+                  <p className="card-text">Card Number: {card.cardNumber}</p>
                 </div>
                 {getBiz() ? (
                   <div className="text-center p-2">
