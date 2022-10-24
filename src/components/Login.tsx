@@ -4,7 +4,7 @@ import { errorMsg, successMsg } from "../services/feedbacksService";
 import * as yup from "yup";
 import { useFormik } from "formik";
 import { checkUser } from "../services/userService";
-import Navbar from "./Navbar";
+
 interface LoginProps {}
 
 const Login: FunctionComponent<LoginProps> = () => {
@@ -18,13 +18,11 @@ const Login: FunctionComponent<LoginProps> = () => {
     onSubmit: (values) => {
       checkUser(values)
         .then((result) => {
-          console.log(result.data);
           sessionStorage.setItem("token", result.data.token);
           successMsg("You logged successfuly!");
           navigate("/home");
         })
-        .catch((error) => {
-          console.log(error);
+        .catch(() => {
           errorMsg("Oops... sumthing is wrong");
         });
     },
