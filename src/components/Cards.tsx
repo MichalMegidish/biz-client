@@ -24,25 +24,27 @@ const Cards: FunctionComponent<CardsProps> = () => {
     <>
       <Navbar />
 
-      <div className="container m-5">
+      <div className="container m-5 ">
         <div className="row">
           {cards.length ? (
             cards.map((card: Card) => (
               <div
                 key={card._id}
-                className="card col-md-3 m-2 text-center"
+                className="card col-md-3 m-2 text-center fw-light"
                 style={{ height: "30rem" }}
               >
                 <div className="" style={{ maxHeight: "11rem" }}>
                   <img src={card.image} alt="" style={{ maxHeight: "11rem" }} />
                 </div>
-                <div className="card-body text-center"></div>
+                <div className="card-body text-center fw-light"></div>
                 <div className="card-footer text-center">
-                  <h1 className="card-title ">{card.name}</h1>
-                  <h5 className="card-title">{card.address}</h5>
-                  <p className="card-text">{card.description}</p>
-                  <p className="card-text"> {card.phone}</p>
-                  <p className="card-text">Card Number: {card.cardNumber}</p>
+                  <h1 className="card-title fw-light">{card.name}</h1>
+                  <h5 className="card-title fw-light">{card.address}</h5>
+                  <p className="card-text fw-light">{card.description}</p>
+                  <p className="card-text fw-light"> {card.phone}</p>
+                  <p className="card-text fw-light">
+                    Card Number: {card.cardNumber}
+                  </p>
                 </div>
               </div>
             ))

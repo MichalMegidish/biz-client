@@ -50,11 +50,13 @@ const MyCards: FunctionComponent<MyCardsProps> = () => {
                 </div>
                 <div className="card-body text-center"></div>
                 <div className="card-footer text-center">
-                  <h1 className="card-title ">{card.name}</h1>
-                  <h5 className="card-title">{card.address}</h5>
-                  <p className="card-text">{card.description}</p>
-                  <p className="card-text"> {card.phone}</p>
-                  <p className="card-text">Card Number: {card.cardNumber}</p>
+                  <h1 className="card-title fw-light">{card.name}</h1>
+                  <h5 className="card-title fw-light">{card.address}</h5>
+                  <p className="card-text fw-light">{card.description}</p>
+                  <p className="card-text fw-light"> {card.phone}</p>
+                  <p className="card-text fw-light">
+                    Card Number: {card.cardNumber}
+                  </p>
                 </div>
                 {getBiz() ? (
                   <div className="text-center p-2">
