@@ -21,7 +21,7 @@ const MyCards: FunctionComponent<MyCardsProps> = () => {
         setCards(result.data);
       })
       .catch((error) => console.log(error));
-  });
+  }, [isChanged]);
 
   const handleDelete = (card: Card) => {
     if (window.confirm(`Are you sure want to delete ${card.name}?`))
