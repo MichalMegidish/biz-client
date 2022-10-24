@@ -24,7 +24,7 @@ const EditCard: FunctionComponent<EditCardProps> = () => {
   useEffect(() => {
     getCard(id as string)
       .then((result) => setCard(result.data))
-      .catch((error) => console.log(error));
+      .catch();
   }, []);
 
   const formik = useFormik({

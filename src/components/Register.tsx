@@ -23,14 +23,12 @@ const Register: FunctionComponent<RegisterProps> = () => {
       let user: User = { ...values };
       addUser(user)
         .then((result) => {
-          console.log(result.data);
           sessionStorage.setItem("token", result.data.token);
           successMsg("You registered successfuly!");
 
           navigate("/home");
         })
-        .catch((error) => {
-          console.log(error);
+        .catch(() => {
           errorMsg("Oops... sumthing is wrong");
         });
     },

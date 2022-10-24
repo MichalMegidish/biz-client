@@ -29,13 +29,11 @@ const NewCards: FunctionComponent<NewCardsProps> = () => {
 
     onSubmit: (values) => {
       AddCard(values)
-        .then((result) => {
-          console.log(result.data);
+        .then(() => {
           successMsg("Your card add successfuly!");
           navigate("/cards");
         })
-        .catch((error) => {
-          console.log(error);
+        .catch(() => {
           errorMsg("Oops... sumthing is wrong");
         });
     },

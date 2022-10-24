@@ -20,15 +20,6 @@ const Cards: FunctionComponent<CardsProps> = () => {
       .catch((error) => console.log(error));
   }, [isChanged]);
 
-  const handleDelete = (card: Card) => {
-    if (window.confirm(`Are you sure want to delete ${card.name}?`))
-      deleteCard(card._id as string)
-        .then(() => {
-          setIsChanged(!isChanged);
-          successMsg("Product deleted successfully");
-        })
-        .catch((err) => errorMsg(err));
-  };
   return (
     <>
       <Navbar />

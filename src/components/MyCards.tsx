@@ -19,7 +19,6 @@ const MyCards: FunctionComponent<MyCardsProps> = () => {
     getMyCards()
       .then((result) => {
         setCards(result.data);
-        console.log(result.data);
       })
       .catch((error) => console.log(error));
   });
